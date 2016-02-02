@@ -1,0 +1,10 @@
+*.suo
+
+Debug/
+Release/
+
+packages/*/
+*.root
+*.xml
+TMVATests.sdf
+*.opendb
