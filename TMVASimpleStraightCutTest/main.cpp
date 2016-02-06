@@ -11,7 +11,7 @@ int main()
 
 	// Create the factory
 	auto outputFile = TFile::Open("tmvaOutput.root", "RECREATE");
-	auto factory = new TMVA::Factory("testjob", outputFile, "!V:!Silent:Color:DrawProgressBar:Transformations=I;D;P;G,D:AnalysisType=Classification");
+	auto factory = new TMVA::Factory("testjob", outputFile, "!V:!Silent:AnalysisType=Classification");
 
 	// Signal and background file.
 	auto signalFile = TFile::Open("signal.training.root", "READ");
@@ -27,8 +27,8 @@ int main()
 	factory->AddVariable("logR", "CalRatio", "", 'F');
 
 	// Book the straight cuts guy
-	factory->BookMethod(TMVA::Types::kCuts, "Cuts",
-		"!H:!V:FitMethod=MC:EffSel:SampleSize=200000:VarProp=FSmart:VarTransform=Decorrelate");
+	factory->BookMethod(TMVA::Types::kCuts, "Cuts"
+		);
 	//factory->BookMethod(
 	//	TMVA::Types::kLikelihood, 
 	//	"Likelihood",
