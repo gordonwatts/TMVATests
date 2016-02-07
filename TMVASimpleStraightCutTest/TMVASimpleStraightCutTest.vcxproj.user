@@ -4,5 +4,11 @@
     <LocalDebuggerEnvironment>ROOTSYS=C:\Users\gordo\AppData\Local\Temp\root/root-5.34.34-vc12
 PATH=$(ROOTSYS)\bin;$(PATH)
 $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

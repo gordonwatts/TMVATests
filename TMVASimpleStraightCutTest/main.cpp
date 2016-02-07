@@ -14,8 +14,10 @@ int main()
 	auto factory = new TMVA::Factory("testjob", outputFile, "!V:!Silent:AnalysisType=Classification");
 
 	// Signal and background file.
-	auto signalFile = TFile::Open("signal.training.root", "READ");
-	auto backgroundFile = TFile::Open("background.training.root", "READ");
+	//auto signalFile = TFile::Open("signal.training.root", "READ");
+	//auto backgroundFile = TFile::Open("background.training.root", "READ");
+	auto signalFile = TFile::Open("HV600pi100.training.root", "READ");
+	auto backgroundFile = TFile::Open("J2Z.training.root", "READ");
 	auto signalTree = static_cast<TTree*>(signalFile->Get("mytree"));
 	auto backgroundTree = static_cast<TTree*>(backgroundFile->Get("mytree"));
 
@@ -27,8 +29,8 @@ int main()
 	factory->AddVariable("logR", "CalRatio", "", 'F');
 
 	// Book the straight cuts guy
-	factory->BookMethod(TMVA::Types::kCuts, "Cuts"
-		);
+	factory->BookMethod(TMVA::Types::kCuts, "SimpleCuts",
+		"!H:V:FitMethod=MC:EffSel:SampleSize=2000:VarProp[0]=FSmart:VarProp[1]=FSmart:VarTransform=Decorrelate");
 	//factory->BookMethod(
 	//	TMVA::Types::kLikelihood, 
 	//	"Likelihood",
