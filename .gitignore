@@ -8,3 +8,4 @@ packages/*/
 *.xml
 TMVATests.sdf
 *.opendb
+**/weights/*

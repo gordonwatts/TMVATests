@@ -21,11 +21,11 @@ namespace DotNetTMVASimpleStraightCut
             WriteLine("Creating the factory");
             var outputFile = NTFile.Open("tmvaNetOutput.root", "RECREATE");
 
-            var factory = new ROOTNET.NTMVA.NFactory(new NTString("testjob"), outputFile, new NTString("!V:!Silent:AnalysisType=Classification"));
+            var factory = new ROOTNET.NTMVA.NFactory(new NTString("testjob"), outputFile, new NTString("!V:DrawProgressBar=True:!Silent:AnalysisType=Classification"));
 
             // Signal and background
-            var signalFileInfo = new FileInfo("..\\signal.training.root");
-            var backgroundFileInfo = new FileInfo("..\\background.training.root");
+            var signalFileInfo = new FileInfo("..\\HV600pi100.training.root");
+            var backgroundFileInfo = new FileInfo("..\\J2Z.training.root");
             var signalFile = NTFile.Open(signalFileInfo.FullName, "READ");
             var backgroundFile = NTFile.Open(backgroundFileInfo.FullName, "READ");
 
@@ -39,7 +39,7 @@ namespace DotNetTMVASimpleStraightCut
             factory.AddVariable(new NTString("nTracks"), new NTString("Number of Tracks"), new NTString(""));
             factory.AddVariable(new NTString("logR"),    new NTString("CalRatio"),         new NTString(""));
 
-            var m = factory.BookMethod(NTypes.EMVA.kCuts, new NTString("Cuts"));
+            var m = factory.BookMethod(NTypes.EMVA.kCuts, new NTString("Cuts"), new NTString("!H:V:FitMethod=MC:EffSel:SampleSize=2000:VarProp[0]=FSmart:VarProp[1]=FSmart:VarTransform=Decorrelate"));
 
             // Given these particular test files, with Cuts, this causes a crash.
             factory.TrainAllMethods();

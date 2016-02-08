@@ -11,7 +11,7 @@ int main()
 
 	// Create the factory
 	auto outputFile = TFile::Open("tmvaOutput.root", "RECREATE");
-	auto factory = new TMVA::Factory("testjob", outputFile, "!V:!Silent:AnalysisType=Classification");
+	auto factory = new TMVA::Factory("testjob", outputFile, "!V:DrawProgressBar=True:!Silent:AnalysisType=Classification");
 
 	// Signal and background file.
 	//auto signalFile = TFile::Open("signal.training.root", "READ");
