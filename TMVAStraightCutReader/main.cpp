@@ -33,5 +33,15 @@ int main()
 	nTracks = 00;
 	cout << "LogR: " << logR << " nTracks: " << nTracks << ": result=" << reader->EvaluateMVA("SimpleCuts", 0.22) << endl;
 
+	vector<double> stuff;
+	stuff.push_back(1.0);
+	stuff.push_back(5);
+	cout << "result=" << reader->EvaluateMVA(stuff, "SimpleCuts", 0.22) << endl;
+	stuff.clear();
+	stuff.push_back(2.0);
+	stuff.push_back(0);
+	cout << "result=" << reader->EvaluateMVA(stuff, "SimpleCuts", 0.22) << endl;
+
+
 	return 0;
 }
