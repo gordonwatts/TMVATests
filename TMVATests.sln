@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetTMVASimpleStraightCut
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TMVAStraightCutReader", "TMVAStraightCutReader\TMVAStraightCutReader.vcxproj", "{95A70841-3E4A-4A36-B0CA-4D64B255FCAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetWriteWriter", "DotNetWriteWriter\DotNetWriteWriter.csproj", "{113E10D5-0721-41DA-9196-B12EC8CB14ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,18 @@ Global
 		{95A70841-3E4A-4A36-B0CA-4D64B255FCAE}.Release|x64.Build.0 = Release|x64
 		{95A70841-3E4A-4A36-B0CA-4D64B255FCAE}.Release|x86.ActiveCfg = Release|Win32
 		{95A70841-3E4A-4A36-B0CA-4D64B255FCAE}.Release|x86.Build.0 = Release|Win32
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Debug|x64.Build.0 = Debug|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Release|x64.Build.0 = Release|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{113E10D5-0721-41DA-9196-B12EC8CB14ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
